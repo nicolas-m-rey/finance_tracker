@@ -45,6 +45,10 @@ group :development do
   gem 'sqlite3', '~> 1.4'
 end
 
+group :production do
+  gem 'pg'
+end
+
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 3.26'
