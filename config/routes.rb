@@ -7,4 +7,8 @@ Rails.application.routes.draw do
   get 'home/index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
    root 'home#index'
+  get 'my_portfolio', to: 'users#my_portfolio'
+  get 'search_stock', to: 'stock#search'
+
+  
 end

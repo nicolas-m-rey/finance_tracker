@@ -25,6 +25,8 @@ gem 'devise'
 gem 'devise-bootstrap-views', '~> 1.0'
 gem 'iex-ruby-client'
 gem 'faraday'
+gem "font-awesome-rails"
+gem 'json'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

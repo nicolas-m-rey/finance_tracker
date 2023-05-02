@@ -25,3 +25,9 @@ end
     address = Net::HTTP.get(uri).to_json
     print address["lastSalePrice"][5]
   end
+
+
+
+      bundle.each do |list|
+       "Ticker: #{list["symbol"]} Last Sale Price: #{list["lastSalePrice"]}"
+    end
