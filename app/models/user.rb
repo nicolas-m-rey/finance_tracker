@@ -23,4 +23,9 @@ class User < ApplicationRecord
   def current_user_stocks
     Stock.where(id: UserStock.where(user_id: id).pluck(:stock_id))
   end
+
+  def full_name
+    return "#{first_name} #{last_name}" if first_name || last_name
+    "Anonymous"
+  end
 end
