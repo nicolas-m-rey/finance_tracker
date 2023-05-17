@@ -5,13 +5,13 @@ class Stock < ApplicationRecord
  validates :stock, :sector, presence: true
 
   def self.new_lookup(stock)
-    client = IEX::Api::Client.new(publishable_token: Rails.application.credentials.iex_client[:publishable_api_key],
+    client = IEX::Api::Client.new(publishable_token: ENV['publishable_api_key'],
                                   endpoint: 'https://cloud.iexapis.com/v1')
   
   begin
 
     
-    bundle = client.get("tops?symbols=#{stock}", token: Rails.application.credentials.iex_client[:secret_api_key])
+    bundle = client.get("tops?symbols=#{stock}", token: ENV['secret_api_key'])
 
 
     bundle = bundle[0]
