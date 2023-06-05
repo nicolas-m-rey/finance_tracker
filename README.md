@@ -1,33 +1,12 @@
 # README
 
-This is the finance tracker app from the Complete Ruby on Rails Developer course
+Finance Tracking app built in Ruby 3.0.2, and Rails 6.1.4. 
+
+Authentication through Devise
+
+Stock information collected through IEX Cloud API connection.
 
 Deployed to - https://finance-tracker-udemy.herokuapp.com
 
+The goal while making this project was learning to properly connect to a RESTful API, as well as integrate friendship relations. 
 
-class Stock < ApplicationRecord
-
-  def self.new_lookup(ticker_symbol)
-    client = IEX::Api::Client.new(publishable_token: 'pk_e68ccc999f3c4a3d8851b5919c8c04b8',
-                                  endpoint: 'https://cloud.iexapis.com/v1')
-    client.lastPrice(ticker_symbol)
-  end
-
-end
-
-
-
-
-
-  require 'net/http'
-  def self.price()
-    uri = URI('https://api.iex.cloud/v1/data/CORE/IEX_TOPS/AAPL?token=pk_e68ccc999f3c4a3d8851b5919c8c04b8')
-    address = Net::HTTP.get(uri).to_json
-    print address["lastSalePrice"][5]
-  end
-
-
-
-      bundle.each do |list|
-       "Ticker: #{list["symbol"]} Last Sale Price: #{list["lastSalePrice"]}"
-    end
