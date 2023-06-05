@@ -8,5 +8,5 @@ Stock information collected through IEX Cloud API connection.
 
 Deployed to - https://finance-tracker-udemy.herokuapp.com
 
-The goal while making this project was learning to properly connect to a RESTful API, as well as integrate friendship relations. 
+The goal while making this project was learning to properly connect to a RESTful API, integrate friendship relations, and to migrate a Postgresql database to production.  
 
